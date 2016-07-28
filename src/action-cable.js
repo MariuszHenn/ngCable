@@ -109,7 +109,7 @@
       var eventName, results;
       results = [];
       for (eventName in this.events) {
-        results.push(this.webSocket.removeEventListener(eventName));
+        results.push(this.webSocket.removeEventListener(eventName, this.events[eventName]));
       }
       return results;
     };
